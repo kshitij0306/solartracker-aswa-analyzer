@@ -1,0 +1,5 @@
+{
+  "name": "SolarTracker ASWA Analyzer",
+  "description": "A professional tool for analyzing Annual Shade-Weighted Area (ASWA) for single-axis solar trackers, featuring real-time physics simulation and AI-powered optimization insights.",
+  "requestFramePermissions": []
+}
