@@ -1,20 +1,39 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# SolarTracker ASWA Analyzer
 
-# Run and deploy your AI Studio app
+A browser-based simulator for single-axis solar trackers that estimates annual shading impacts and visualizes ground-level shade patterns. It lets you tune array geometry, tracker behavior, and simulation windows, then reports shade-weighted losses with an optional AI summary.
 
-This contains everything you need to run your app locally.
+## What it does
+- Simulates yearly sun positions for a site and computes inter-row shading.
+- Calculates Annual Shade-Weighted Area (ASWA) and energy-weighted shading loss.
+- Renders a ground heatmap / 3D shadow explorer to inspect shade patterns.
+- Generates concise Gemini-based design insights (optional).
 
-View your app in AI Studio: https://ai.studio/apps/drive/1ZtvVIUj_scqEspQPt2ysT0hmupAOhRPX
+## Inputs you can adjust
+- Location (latitude, longitude)
+- Panel chord (width)
+- Tracker length
+- Row spacing (pitch) and number of rows
+- Hub height
+- Max rotation and backtracking toggle
+- Simulation time window (start/end hour)
 
-## Run Locally
+## Outputs
+- Annual shade loss percentage (energy weighted)
+- Total ASWA metric (Wh/m²)
+- Ground shading heatmap and 3D visualizer
+- AI recommendations for reducing shade loss (when enabled)
 
-**Prerequisites:**  Node.js
-
+## Run locally
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+   ```bash
+   npm install
+   ```
+2. Create `.env.local` with your API key (optional for AI insights):
+   ```bash
+   API_KEY=your_gemini_api_key
+   ```
+3. Start the dev server:
+   ```bash
+   npm run dev
+   ```
